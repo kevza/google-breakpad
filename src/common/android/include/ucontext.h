@@ -35,8 +35,11 @@
 #ifdef __BIONIC_UCONTEXT_H
 #include <ucontext.h>
 #else
-
+#ifndef ANDROID
 #include <sys/ucontext.h>
+#else
+#include <ucontext.h>
+#endif
 
 #ifdef __cplusplus
 extern "C" {

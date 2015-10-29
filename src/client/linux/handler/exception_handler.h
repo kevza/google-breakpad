@@ -33,7 +33,12 @@
 #include <signal.h>
 #include <stdint.h>
 #include <stdio.h>
+
+#ifndef ANDROID
 #include <sys/ucontext.h>
+#else
+#include <ucontext.h>
+#endif
 
 #include <string>
 

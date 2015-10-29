@@ -32,7 +32,13 @@
 
 #include <stdint.h>
 #include <sys/types.h>
+
+#ifndef ANDROID
 #include <sys/ucontext.h>
+#else
+#include <ucontext.h>
+#endif
+
 #include <unistd.h>
 
 #include <list>
